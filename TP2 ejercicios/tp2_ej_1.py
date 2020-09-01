@@ -17,21 +17,26 @@ def cargar_lista():
         lista.append(random.randint(0000,9999))
     return lista
 
-def sumar_lista():
+def sumar_lista(lista):
     total = 0
     for i in lista:
         total += i
     return total
 
-def eliminar_valor(valor_a_eliminar):
-    repeticiones = lista.count(valor_a_eliminar)
-    for i in repeticiones:
+def eliminar_valor(valor_a_eliminar, lista):
+    while valor_a_eliminar in lista:
         lista.remove(valor_a_eliminar)
-    
-    
+
+
+
 
 #Programa Principal
-cargar_lista()
+lista = cargar_lista()
+print(lista)
+print("Sumatoria de los elementos de la lista:", sumar_lista(lista))
+lista_prueba = [0,54,69,7,14,2,8,9,3,7,45,87,21,17,4,7,56,7,21,7]
+eliminar_valor(int(input("Ingrese valor para eliminar:")), lista_prueba)
+print(lista_prueba)
 
         
         
